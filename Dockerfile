@@ -1,4 +1,4 @@
-ARG TERRA_VERSION=2.4.1
+ARG TERRA_VERSION=2.5.2
 
 FROM ghcr.io/terra-money/core:${TERRA_VERSION}
 
@@ -52,5 +52,6 @@ CMD terrad start \
     --p2p.upnp true \
     --rpc.laddr tcp://0.0.0.0:26657 \
     --api.enable true \
+    --api.address tcp://0.0.0.0:1317 \
     --api.swagger true \
     --api.enabled-unsafe-cors true 
